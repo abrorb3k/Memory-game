@@ -13,14 +13,14 @@ import Card from "@/components/Card";
 import { CardI } from "@/lib/types";
 import React, { useEffect, useState } from "react";
 
-const Page = () => {
+const Page: React.FC = () => {
   const [randomCards, setRandomCards] = useState<CardI[]>([]);
   const [selectedCards, setSelectedCards] = useState<number[]>([]);
   const [matchedCardIds, setMatchedCardIds] = useState<string[]>([]);
 
   const generateRandomCards = (sourceCards: CardI[]) => {
     const shuffled = [...sourceCards]
-      .concat(sourceCards.map((c) => ({ ...c, id: c.id + 100 }))) // duplicate and change id
+      .concat(sourceCards.map((c) => ({ ...c, id: c.id + 100 })))
       .sort(() => Math.random() - 0.5);
     setRandomCards(shuffled);
   };
@@ -33,9 +33,9 @@ const Page = () => {
     setSelectedCards(newSelected);
 
     if (newSelected.length === 2) {
-      const [firstId, secondId] = newSelected;
-      const firstCard = randomCards.find((card) => card.id === firstId);
-      const secondCard = randomCards.find((card) => card.id === secondId);
+      const [first, second] = newSelected;
+      const firstCard = randomCards.find((card) => card.id === first);
+      const secondCard = randomCards.find((card) => card.id === second);
 
       if (firstCard && secondCard && firstCard.card_id === secondCard.card_id) {
         setMatchedCardIds((prev) => [...prev, firstCard.card_id]);
