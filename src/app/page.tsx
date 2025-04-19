@@ -52,8 +52,8 @@ const Page: React.FC = () => {
   }, []);
 
   return (
-    <div className="p-10 min-h-screen flex items-center justify-center">
-      <div className="grid grid-cols-4 gap-4 max-w-[800px] w-full">
+    <div className="bg-gray-900 h-[800px] flex items-center justify-center">
+      <div className="grid grid-cols-4 gap-4 max-w-[600px] w-full">
         {randomCards.map((c) => {
           const isFlipped =
             selectedCards.includes(c.id) || matchedCardIds.includes(c.card_id);
