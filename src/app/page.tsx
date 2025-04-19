@@ -38,7 +38,7 @@ const Page = () => {
       const secondCard = randomCards.find((card) => card.id === second);
 
       if (firstCard?.card_id === secondCard?.card_id) {
-        setMatchedCardIds((prev) => [...prev, firstCard.card_id]);
+        setMatchedCardIds((prev) => [...prev,]);
       }
 
       setTimeout(() => {
