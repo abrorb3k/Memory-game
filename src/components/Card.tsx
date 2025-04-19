@@ -1,10 +1,10 @@
 "use client";
-import { cardI } from "@/lib/types";
+import { CardI } from "@/lib/types";
 import Image from "next/image";
 import React from "react";
 
 interface PropsTypes {
-  card: cardI;
+  card: CardI;
   isFlipped: boolean;
   onClick: (id: number) => void;
 }
