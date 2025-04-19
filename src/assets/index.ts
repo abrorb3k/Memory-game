@@ -1,4 +1,4 @@
-export  {default as Bmw } from './bmw.jpg'
+export  {default as Bmw } from './Bmw.jpg'
 export  {default as Bugatti } from './Bugatti.jpg'
 export  {default as Chevrolet } from './Chevrolet.jpg'
 export  {default as Lambo } from './Lambo.jpg'
