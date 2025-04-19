@@ -1,0 +1,8 @@
+export  {default as Bmw } from './bmw.jpeg'
+export  {default as Bugatti } from './Bugatti.jpeg'
+export  {default as Chevrolet } from './Chevrolet.jpeg'
+export  {default as Lambo } from './Lambo.jpeg'
+export  {default as Mers } from './Mers.jpeg'
+export  {default as Mustang } from './Mustang.jpeg'
+export  {default as Rolls } from './Rolls.jpeg'
+export  {default as Tesla } from './Tesla.jpeg'
