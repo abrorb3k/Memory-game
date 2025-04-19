@@ -20,7 +20,7 @@ const Page = () => {
 
   const generateRandomCards = (sourceCards: CardI[]) => {
     const shuffled = [...sourceCards]
-      .concat(sourceCards.map((c) => ({ ...c, id: c.id + 100 }))) 
+      .concat(sourceCards.map((c) => ({ ...c, id: c.id + 100 }))) // duplicate and change id
       .sort(() => Math.random() - 0.5);
     setRandomCards(shuffled);
   };
@@ -33,12 +33,12 @@ const Page = () => {
     setSelectedCards(newSelected);
 
     if (newSelected.length === 2) {
-      const [first, second] = newSelected;
-      const firstCard = randomCards.find((card) => card.id === first);
-      const secondCard = randomCards.find((card) => card.id === second);
+      const [firstId, secondId] = newSelected;
+      const firstCard = randomCards.find((card) => card.id === firstId);
+      const secondCard = randomCards.find((card) => card.id === secondId);
 
       if (firstCard && secondCard && firstCard.card_id === secondCard.card_id) {
-        // setMatchedCardIds((prev) => [...prev]);
+        setMatchedCardIds((prev) => [...prev, firstCard.card_id]);
       }
 
       setTimeout(() => {
